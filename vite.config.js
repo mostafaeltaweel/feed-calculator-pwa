@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: process.env.NODE_ENV === 'production' ? '/feed-calculator-pwa/' : '/',
+  base: '/feed-calculator-pwa/',
 })
