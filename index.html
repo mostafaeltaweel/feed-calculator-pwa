@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#090d16" />
+    <meta name="description" content="تطبيق حاسبة تركيبة الأعلاف للدواجن والحيوانات - حساب الكلفة والتحليل الغذائي فورياً بأسلوب الإكسل أوفلاين" />
+    <link rel="manifest" href="/feed-calculator-pwa/manifest.json" />
+    <title>حاسبة تركيبة الأعلاف | Feed Formulation PWA</title>
+    <script type="module" crossorigin src="/feed-calculator-pwa/assets/index-Cy-c9YW4.js"></script>
+    <link rel="stylesheet" crossorigin href="/feed-calculator-pwa/assets/index-BX40Rmcf.css">
+  </head>
+  <body class="bg-slate-950 text-slate-100 font-sans antialiased">
+    <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then((reg) => {
+            console.log('SW registered!', reg);
+          }).catch((err) => {
+            console.log('SW registration failed!', err);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
